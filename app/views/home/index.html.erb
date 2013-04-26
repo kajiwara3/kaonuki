@@ -1,5 +1,14 @@
-<div data-role="header">
-  <h1>TOP</h1>
+<div data-role="header" data-theme="b">
+  <h1>Kaonuki</h1>
 </div>
-<p><%= link_to "photos", photos_path %></p>
-<div data-role="footer">kaonuki.com</div>
+<div data-role="content">
+  <ul data-role="listview" data-theme="c" data-inset="true">
+    <li data-role="list-divider">Menu</li>
+    <li>
+      <%= link_to "photos", photos_path %>
+    </li>
+    <li>
+      <%= link_to "account", "#" %>
+    </li>
+  </ul>
+</div>
