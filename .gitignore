@@ -22,6 +22,7 @@ capybara-*.html
 .rspec
 /vendor/bundle
 /public/system/*
+/public/uploads/*
 /coverage/
 /spec/tmp/*
 **.orig

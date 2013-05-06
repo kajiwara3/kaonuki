@@ -1,12 +1,18 @@
+<div data-role="header" data-theme="b" >
+  <h1>Kaonuki</h1>
+</div>
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
   <%= @photo.title %>
 </p>
-
 <p>
-  <strong>Discription:</strong>
+  <strong>Image</strong>
+  <%= image_tag @photo.image %>
+</p>
+<p>
+  <strong>Description:</strong>
   <%= @photo.description %>
 </p>
 
