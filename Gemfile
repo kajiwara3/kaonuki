@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'sqlite3'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -31,7 +29,16 @@ gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 # ページネーション
 gem 'kaminari'
 gem 'protected_attributes'
+################################################
+# テスト・開発環境用
+################################################
+group :test, :development do
+  gem 'sqlite3'
+end
 
+group :stating do
+  gem 'mysql2'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
