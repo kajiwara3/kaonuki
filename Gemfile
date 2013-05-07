@@ -29,6 +29,13 @@ gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 # ページネーション
 gem 'kaminari'
 gem 'protected_attributes'
+
+# デプロイ
+gem 'capistrano'
+gem 'capistrano-ext'
+gem 'capistrano_colors'
+gem 'rvm-capistrano'
+
 ################################################
 # テスト・開発環境用
 ################################################
