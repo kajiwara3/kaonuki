@@ -1,9 +1,11 @@
+# coding: utf-8
+
 set :application, "kaonuki"
 
 # multistage setting
-require "capistrano/ext/multistage"
 set :stages, %w(production staging)
 set :default_stage, 'staging'
+require "capistrano/ext/multistage"
 
 # color output setting
 require 'capistrano_colors'
@@ -39,7 +41,7 @@ namespace :deploy do
 
   desc "Copy shared config files to current application."
   task :config_symlink do
-    run "ln -s /home/seiji/config/database.yml #{release_path}/config/database.yml"
+    run "ln -s /home/ec2-user/config/database.yml #{release_path}/config/database.yml"
   end
 
   namespace :db do
