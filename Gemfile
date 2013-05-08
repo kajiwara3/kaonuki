@@ -32,7 +32,7 @@ gem 'protected_attributes'
 
 # デプロイ
 gem 'capistrano'
-gem 'capistrano-ext'
+#gem 'capistrano-ext'
 gem 'capistrano_colors'
 gem 'rvm-capistrano'
 
