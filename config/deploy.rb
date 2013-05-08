@@ -10,7 +10,7 @@ require 'capistrano_colors'
 
 # RVM
 require "rvm/capistrano"
-set :rvm_ruby_strig, "1.9.3"
+set :rvm_ruby_strig, "2.0.0"
 
 # scm setting
 set :scm, :git
