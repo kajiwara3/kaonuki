@@ -1,5 +1,5 @@
 Kaonuki::Application.routes.draw do
-  devise_for :users, controllers: {sessions: "users/sessions"}
+  devise_for :users
   resources :photos
 
   # The priority is based upon order of creation: first created -> highest priority.
