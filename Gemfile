@@ -8,7 +8,6 @@ gem 'rails', '4.0.0.beta1'
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
-  gem 'jquery_mobile_rails'
   gem 'carrierwave'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -19,6 +18,8 @@ end
 gem 'execjs'
 gem 'therubyracer'
 gem 'jquery-rails'
+gem 'jquery_mobile_rails'
+gem 'jpmobile', github: 'jpmobile/jpmobile', branch: 'master'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

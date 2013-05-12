@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/jpmobile/jpmobile.git
+  revision: a031d86e585d6dcbe6435e4d36883b78acca8536
+  branch: master
+  specs:
+    jpmobile (4.0.0.beta.1)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: c6189696772925ae0c608fdd8d535f735e8e114e
   branch: rails4
@@ -166,6 +173,7 @@ DEPENDENCIES
   devise!
   execjs
   jbuilder (~> 1.0.1)
+  jpmobile!
   jquery-rails
   jquery_mobile_rails
   kaminari
