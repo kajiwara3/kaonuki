@@ -1,5 +1,8 @@
 # coding: utf-8
 
+require 'rvm/capistrano'
+set :rvm_ruby_string,  ENV['GEM_HOME'].gsub(/.*\//,"")
+set :rvm_type, :user
 set :application, "kaonuki"
 
 # multistage setting
@@ -62,9 +65,10 @@ end
 after "deploy:update_code", :bundle_install
 
 # 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
-after "deploy:update","deploy:config_symlink"
-# 本コマンド実行時に、デプロイ先に配置してあるdatabase.ymlのシンボリックリンクを設定する
+#after "deploy:update","deploy:config_symlink"
 #before "deploy:migrate", "deploy:config_symlink"
+before "deploy:assets:precompile", "deploy:config_symlink"
+
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
