@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(version: 20130429132856) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "use_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
+    t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

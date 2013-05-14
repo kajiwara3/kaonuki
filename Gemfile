@@ -18,8 +18,12 @@ gem 'therubyracer'
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
 gem 'jpmobile', github: 'jpmobile/jpmobile', branch: 'master'
-# file uploader 
+# file uploader
 gem 'carrierwave'
+# 日本語化
+gem 'rails-i18n'
+gem 'i18n_generators'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
