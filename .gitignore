@@ -36,4 +36,3 @@ config/environments/development.rb
 *.erm
 .DS_Store
 config/database.yml
-config/database.yml
