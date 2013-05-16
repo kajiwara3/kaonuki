@@ -15,9 +15,9 @@ set :deploy_to, "/home/#{user}"
 
 #server "www.kaonuki.info", :app, :web, :db, primary: true
 [:web, :app].each do |type|
-  role type, 'www.kaonuki.info'
+  role type, 'stg.kaonuki.info'
 end
-role :db, 'www.kaonuki.info', :primary => true
+role :db, 'stg.kaonuki.info', :primary => true
 
 # Bundle
 set :bundle_flags, ""
