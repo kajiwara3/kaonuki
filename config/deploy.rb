@@ -1,6 +1,7 @@
 # coding: utf-8
 
 require 'rvm/capistrano'
+
 set :rvm_ruby_string,  ENV['GEM_HOME'].gsub(/.*\//,"")
 set :rvm_type, :user
 set :application, "kaonuki"
