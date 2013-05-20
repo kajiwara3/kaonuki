@@ -9,9 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div data-role="page" data-add-back-btn="true" data-back-btn-text="back">
+  <div data-role="page" data-back-btn-text="back">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
     <div data-role="footer" data-theme="b">
       kaonuki.com
