@@ -21,8 +21,10 @@ gem 'jpmobile', github: 'jpmobile/jpmobile', branch: 'master'
 # file uploader
 gem 'carrierwave'
 gem 'fog', '1.4.0'
-#gem 'fog'
 gem 'net-scp', '1.0.4'
+
+# resize image
+gem 'rmagick'
 
 # 日本語化
 gem 'rails-i18n'
