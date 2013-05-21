@@ -9,7 +9,7 @@
 </p>
 <p>
   <strong>Image</strong>
-  <%= image_tag @photo.image %>
+  <%= image_tag @photo.image_url(:thumb).to_s %>
 </p>
 <p>
   <strong>Description:</strong>
