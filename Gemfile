@@ -26,6 +26,15 @@ gem 'net-scp', '1.0.4'
 # resize image
 gem 'rmagick'
 
+# twitter
+gem 'twitter'
+gem 'omniauth-twitter'
+
+# facebook
+gem 'fb_graph'
+gem 'omniauth-facebook'
+gem 'activerecord-session_store'
+
 # 日本語化
 gem 'rails-i18n'
 gem 'i18n_generators'
