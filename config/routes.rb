@@ -1,5 +1,10 @@
 Kaonuki::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"} do
+    delete "/users/disconect/:provider",
+      to: 'users#disconnect_omniauth_provider',
+      as: 'disconnect_omniauth_provider'
+  end
+  resources :users
   resources :photos
 
   # The priority is based upon order of creation: first created -> highest priority.
