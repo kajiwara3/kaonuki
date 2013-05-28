@@ -26,9 +26,20 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.user = current_user
-    
+
+    @graph = Koala::Facebook::API.new current_user.access_token
+    #@clown = Magick::ImageList.new @photo.image.url
+    #@clown_id = StringIO.open(@clown.to_blob) do |strio|
+    #  response = @graph.put_picture(strio, "image/jpeg")
+    #  response['id']
+    #end
+    #@picture_url = @graph.get_picture(@clown_id)
+    #@graph.put_wall_post(@photo.description, {picture: @picture_url})
     respond_to do |format|
       if @photo.save
+        logger.info url_for(action: 'photos', id: @photo.id, action: 'show')
+        @graph.put_connections current_user.uid, 'feed', message: 'メッセージ',
+                                                  link: url_for(action: 'photos', id: @photo.id, action: 'show')
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @photo }
       else

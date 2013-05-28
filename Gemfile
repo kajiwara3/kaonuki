@@ -26,14 +26,11 @@ gem 'net-scp', '1.0.4'
 # resize image
 gem 'rmagick'
 
-# twitter
-gem 'twitter'
-gem 'omniauth-twitter'
-
 # facebook
-gem 'fb_graph'
+gem "omniauth"
 gem 'omniauth-facebook'
 gem 'activerecord-session_store'
+gem "koala", "~> 1.7.0rc1"
 
 # 日本語化
 gem 'rails-i18n'
