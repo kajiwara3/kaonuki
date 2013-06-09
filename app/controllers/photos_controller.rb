@@ -37,8 +37,7 @@ class PhotosController < ApplicationController
     #@graph.put_wall_post(@photo.description, {picture: @picture_url})
     respond_to do |format|
       if @photo.save
-        logger.info url_for(action: 'photos', id: @photo.id, action: 'show')
-        @graph.put_connections current_user.uid, 'feed', message: 'メッセージ',
+        @graph.put_connections current_user.uid, 'feed', message: @photo.description,
                                                   link: url_for(action: 'photos', id: @photo.id, action: 'show')
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @photo }
