@@ -12,7 +12,7 @@
     </li>
     <li>
       <%= link_to('logout', destroy_user_session_path, method: :delete) if current_user %>
-      <%= link_to('sign_in', user_omniauth_authorize_path(:facebook)) if !user_signed_in? %>
+      <%= link_to('sign_in', user_omniauth_authorize_path(:facebook), 'data-ajax' => false) if !user_signed_in? %>
     </li>
   </ul>
 </div>
